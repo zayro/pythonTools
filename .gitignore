@@ -1,0 +1,9 @@
+# ignore environment folder
+dataHandler/
+.venv/*
+logs/*
+# ignore cache folder
+__pycache__/
+
+#ignore file
+.env.*
