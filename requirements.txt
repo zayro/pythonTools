@@ -16,3 +16,8 @@ SQLAlchemy
 cryptography
 python-dotenv
 argparse
+pony
+medoo
+records[pandas]
+tablib
+pytest
