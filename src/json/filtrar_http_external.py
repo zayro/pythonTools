@@ -41,6 +41,6 @@ def buscar_empleo(url):
 
 i = 0
 while i < 27:
-    url = f"https://simo.cnsc.gov.co/empleos/ofertaPublica/?search_palabraClave=&search_nivel=&search_convocatoria=554177302&search_departamento=&search_municipio=&search_salario=&search_entidad=&search_numeroOPEC=&page={i}&size=10" 
+    url = f"https://simo.cnsc.gov.co/empleos/ofertaPublica/?search_palabraClave=&search_nivel=3&search_convocatoria=678784991&search_departamento=&search_municipio=&search_salario=&search_entidad=&search_numeroOPEC=&page={i}&size=10"
     buscar_empleo(url)
     i += 1

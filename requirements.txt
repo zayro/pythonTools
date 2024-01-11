@@ -21,3 +21,5 @@ medoo
 records[pandas]
 tablib
 pytest
+locust
+MoviePy
