@@ -2,5 +2,7 @@
     "[python]": {
         "editor.defaultFormatter": "ms-python.black-formatter"
     },
-    "python.formatting.provider": "none"
+    "python.formatting.provider": "none",
+    "notebook.experimental.variablesView": true,
+    "terminal.integrated.mouseWheelZoom": true
 }
