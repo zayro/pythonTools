@@ -1,7 +1,9 @@
 # ignore environment folder
 dataHandler/
 .venv/*
+.conda/*
 logs/*
+
 # ignore cache folder
 __pycache__/
 
