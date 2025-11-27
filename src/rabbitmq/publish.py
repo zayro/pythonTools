@@ -1,20 +1,23 @@
 import pika
 
-# 1. Establecer la conexión
-# Reemplaza 'localhost' por la dirección de tu broker si no está en el mismo equipo.
 connection = pika.BlockingConnection(pika.ConnectionParameters('localhost'))
 channel = connection.channel()
 
-# 2. Declarar la cola
-# Esto crea la cola si aún no existe.
-channel.queue_declare(queue='hola_cola')
+# Declarar exchange (direct) y cola opcionalmente
+exchange_name = 'mi_exchange'
+routing_key = 'mi_routing'
+channel.exchange_declare(exchange=exchange_name, exchange_type='direct', durable=True)
 
-# 3. Publicar el mensaje
-channel.basic_publish(exchange='',
-                      routing_key='hola_cola',
-                      body='¡Hola, mundo!')
+message = '¡Hola, mundo con exchange y routing key!'
+# Mensaje persistente (delivery_mode=2)
+channel.basic_publish(
+    exchange=exchange_name,
+    routing_key=routing_key,
+    body=message,
+    properties=pika.BasicProperties(delivery_mode=2)
+)
 
-print(" [x] Enviado '¡Hola, mundo!'")
+print(f" [x] Enviado a exchange='{exchange_name}' routing_key='{routing_key}': {message}")
 
-# 4. Cerrar la conexión
 connection.close()
+# ...existing code...
