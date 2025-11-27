@@ -23,3 +23,5 @@ tablib
 pytest
 locust
 MoviePy
+pika
+PyPDF2
