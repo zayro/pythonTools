@@ -11,7 +11,7 @@
 - virtualenv .venv
 - cd api
 - 'linux' source bin/activate
-- 'windows' Scripts\activate.bat
+- 'windows' .venv\Scripts\activate.bat
 
 ## Version
 
